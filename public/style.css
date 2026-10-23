@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f9;
+    margin: 0;
+    padding: 50px 20px;
+    color: #1e293b;
+}
+
+h1 {
+    text-align: center;
+    color: #5b4bdb;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#title {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#title:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 3px #e5e1ff;
+}
+
+button {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 9px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 8px;
+}
+
+button:hover {
+    background: #5142c7;
+    transform: translateY(-2px);
+}
+
+#addBtn {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    overflow-wrap: anywhere;
+}
+
+#taskList li:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+#taskList li.completed {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+#taskList li button {
+    flex-shrink: 0;
+    margin-right: 0;
+}
+
+#taskList li button:last-child {
+    background: #ef4444;
+}
+
+#taskList li button:last-child:hover {
+    background: #dc2626;
+}
+
+@media (min-width: 600px) {
+    body {
+        max-width: 650px;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    #taskList li {
+        padding: 10px;
+        gap: 5px;
+    }
+
+    #taskList li button {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+}
